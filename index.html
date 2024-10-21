@@ -1,19 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>adminera</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="container header-content">
+            <div class="image-container">
+                <img src="images/kali.png" alt="Kali Linux" class="tech-icon">
+                <img src="images/linux.png" alt="Linux Penguin" class="tech-icon">
+                <img src="images/python.png" alt="Python Logo" class="tech-icon">
+            </div>
+            <div class="text-content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Here are some of my projects.</p>
+            </div>
+        </div>
+    </header>
 
-<h1>adminera's root site</h1>
-<p> Welcome to adminera's github pages root site! </p>
-<p>Please check out some of my projects below!</p>
-  <ol>
-    <li><a href="https://adminera.github.io/recipes-website/"> recipes website </li>
-  </ol>
+    <section id="projects">
+        <div class="container">
+            <!-- Project 1: XSSreplay -->
+            <div class="project-block">
+                <div class="content">
+                    <h2>XSSreplay</h2>
+                    <p>This is a tool that is used to debug XSS payloads and how they interact with the target website.</p>
+                    <button class="btn" onclick="toggleDetails(this)">View More</button>
+                </div>
+                <div class="details">
+                    <p>
+                        XSSreplay provides a sandbox to safely test Cross-Site Scripting (XSS) payloads and their behavior
+                        on a target site. It captures and logs responses, making it easier to analyze how scripts
+                        are executed across various browsers.
+                    </p>
+                    <a href="https://github.com/adminera/xssreplay" target="_blank">View on GitHub</a>
+                </div>
+            </div>
 
+            <!-- Project 2: HTTP Server Java -->
+            <div class="project-block">
+                <div class="content">
+                    <h2>HTTP Server Java</h2>
+                    <p>This is a server that is coded using Java that demonstrates sockets and networking.</p>
+                    <button class="btn" onclick="toggleDetails(this)">View More</button>
+                </div>
+                <div class="details">
+                    <p>
+                        This Java-based HTTP server demonstrates core networking concepts like socket programming and
+                        multithreading. It can handle basic HTTP requests and serve static web pages, making it
+                        a great educational project for understanding client-server communication.
+                    </p>
+                    <a href="https://github.com/adminera/httpserverjava" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 3: Network Port Scanner -->
+            <div class="project-block">
+                <div class="content">
+                    <h2>Network Port Scanner</h2>
+                    <p>This is a tool to scan for open ports in a network, it is scripted in Python and integrates NMAP.</p>
+                    <button class="btn" onclick="toggleDetails(this)">View More</button>
+                </div>
+                <div class="details">
+                    <p>
+                        This Python-based port scanner utilizes NMAP to scan networks for open ports, providing a
+                        fast and efficient way to assess network security. It integrates multiple scanning modes
+                        and generates detailed reports on network vulnerabilities.
+                    </p>
+                    <a href="https://github.com/adminera/python-network-scanner" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 adminera. All rights and lefts reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
