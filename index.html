@@ -6,6 +6,77 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 50px 0;
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .tech-icon {
+            width: 60px;
+            height: 60px;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .project-block {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 30px;
+            margin: 20px auto;
+            width: 60%;
+            transition: transform 0.4s ease-in-out;
+            text-align: center;
+        }
+        .project-block:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .btn {
+            background: #fff;
+            color: #6a11cb;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #2575fc;
+            color: #fff;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 30px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+        }
+        .expanded .details {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -66,6 +137,20 @@
         <p>© 2024 adminera. All rights and lefts reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function toggleDetails(button) {
+            const projectBlock = button.closest('.project-block');
+            projectBlock.classList.toggle('expanded');
+            
+            const details = projectBlock.querySelector('.details');
+            if (projectBlock.classList.contains('expanded')) {
+                details.style.display = 'block';
+                button.textContent = 'View Less';
+            } else {
+                details.style.display = 'none';
+                button.textContent = 'View More';
+            }
+        }
+    </script>
 </body>
 </html>
